@@ -15,6 +15,20 @@ module.exports = {
       sm: { max: "639px" },
       // => @media (max-width: 639px) { ... }
     },
+    color: {
+      home: {
+        DEFAULT: "#FCFF5B",
+      },
+    },
+    backgroundColor: (theme) => ({
+      ...theme("colors"),
+      home: "#FCFF5B",
+      white: "#F9F9F9",
+      black: "#1A1A1A",
+    }),
+    fontFamily: {
+      header: ["DM Sans"],
+    },
   },
   variants: {},
   plugins: [],

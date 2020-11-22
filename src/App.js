@@ -1,10 +1,11 @@
 import "./App.css";
 import "./tailwind.generated.css";
+import NavbarHome from "./components/NavbarHome.js";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Worlds!</h1>
+    <div className="bg-home h-screen mx:auto font-header antialiased">
+      <NavbarHome />
     </div>
   );
 }
