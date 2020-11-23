@@ -25,6 +25,7 @@ module.exports = {
       home: "#FCFF5B",
       white: "#F9F9F9",
       black: "#1A1A1A",
+      pink: "#FFA8F6",
     }),
     fontFamily: {
       header: ["DM Sans"],

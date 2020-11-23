@@ -7,7 +7,7 @@ export default function NavbarHome() {
         <a href="#home" onClick={(e) => e.preventDefault()}>
           <div className="md:w-7 md:h-7 w-14 h-14 rounded-full bg-black"></div>
         </a>
-        <div className="flex justify-between w-96 md:w-64 sm:w-52">
+        <div className="flex justify-around w-96 md:w-64 sm:w-52">
           <button className="focus:outline-white font-bold transition transform ease-in hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none">
             Home
           </button>
