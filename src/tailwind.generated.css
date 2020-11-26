@@ -28876,6 +28876,13 @@ video {
   text-align: center;
 }
 
+.testing {
+  height: 10rem;
+  width: 10rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(26, 26, 26, var(--tw-bg-opacity));
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;

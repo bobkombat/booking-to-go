@@ -7,6 +7,12 @@
   text-align: center;
 }
 
+.testing {
+  height: 10rem;
+  width: 10rem;
+  @apply bg-black;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
