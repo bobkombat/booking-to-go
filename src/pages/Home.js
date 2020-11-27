@@ -1,7 +1,7 @@
-import NavbarHome from "./components/NavbarHome.js";
-import MainHeader from "./components/MainHeader.js";
-import Quote from "./components/Quote";
-import Feature from "./components/Feature";
+import NavbarHome from "../components/NavbarHome.js";
+import MainHeader from "../components/MainHeader.js";
+import Quote from "../components/Quote";
+import Feature from "../components/Feature";
 
 export default function Home() {
   return (

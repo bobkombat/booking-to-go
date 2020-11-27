@@ -1,19 +1,16 @@
 import "./tailwind.generated.css";
-import NavbarHome from "./components/NavbarHome.js";
-import MainHeader from "./components/MainHeader.js";
-import Quote from "./components/Quote";
-import Feature from "./components/Feature";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import Home from "./pages/Home.js";
+import Search from "./pages/Search";
 
 function App() {
   return (
-    <div className="bg-home font-header antialiased overflow-hidden">
-      <NavbarHome />
-      <main>
-        <MainHeader />
-        <Quote />
-        <Feature />
-      </main>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/:searched" component={Search} />
+      </Switch>
+    </Router>
   );
 }
 
