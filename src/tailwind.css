@@ -24,3 +24,9 @@
 .h {
   height: 36rem;
 }
+
+.image-bg {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFkjOQ-jNbmYcGgKh1omDMVnMlUrr1Uxz0nA&usqp=CAU");
+  background-position: center;
+  background-size: contain;
+}
