@@ -28901,6 +28901,15 @@ video {
   background-size: contain;
 }
 
+.crop {
+  overflow: hidden;
+}
+
+.crop .img-feature {
+  width: 100%;
+  margin: -150px 0 0 0;
+}
+
 @media (max-width: 1279px) {
   .xl\:container {
     width: 100%;

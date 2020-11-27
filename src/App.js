@@ -1,4 +1,3 @@
-import "./App.css";
 import "./tailwind.generated.css";
 import NavbarHome from "./components/NavbarHome.js";
 import MainHeader from "./components/MainHeader.js";
