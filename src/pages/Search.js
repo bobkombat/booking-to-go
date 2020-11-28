@@ -13,7 +13,7 @@ export default function Search() {
 
   useEffect(() => {
     dispatch(fetchMovies(searched, page, "dari use effect searchbarsearch"));
-  }, [searched, page]);
+  }, [searched, page, dispatch]);
 
   return (
     <div className="mx-auto bg-white font-header antialiased h-screen overflow-auto">
