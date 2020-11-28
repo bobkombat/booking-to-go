@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { fetchMovies } from "../../store/actions/movieActions.js";
-import { API_URL } from "../../store/actionTypes.js";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -14,7 +13,7 @@ export default function SearchBarHome() {
   const history = useHistory();
 
   useEffect(() => {
-    if (movies.length > 1 && fetched) {
+    if (movies !== undefined && movies.length > 1 && fetched) {
       history.push(`/search/${searchedValue}/${currentPage}`);
       setLoading(false);
     }
@@ -23,7 +22,7 @@ export default function SearchBarHome() {
   async function submitSearch(e) {
     e.preventDefault();
     setLoading(true);
-    dispatch(fetchMovies(API_URL, searchedValue));
+    dispatch(fetchMovies(searchedValue));
   }
 
   return (

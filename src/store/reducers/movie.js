@@ -9,7 +9,7 @@ const initialState = {
   totalMovie: 0,
 };
 
-export default (state = initialState, actions) => {
+const movieReducer = (state = initialState, actions) => {
   switch (actions.type) {
     case SET_MOVIES:
       return {
@@ -22,10 +22,12 @@ export default (state = initialState, actions) => {
     case SET_MOVIE_DETAIL:
       return { ...state, movieDetail: actions.payload.movieDetail };
     case CHANGE_PAGE:
-      return { ...state, movies: actions.payload.movies, currentPage: actions.payload.currentPage };
+      return { ...state, currentPage: actions.payload.currentPage };
     case SET_FETCH:
       return { ...state, fetched: actions.payload.fetched };
     default:
       return state;
   }
 };
+
+export default movieReducer;

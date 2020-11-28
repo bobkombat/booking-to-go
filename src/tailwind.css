@@ -52,3 +52,53 @@ figure .img-card {
   display: block; /*remove inline-block spaces*/
   width: 100%;
 }
+
+.current-page {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.country-card-container {
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.country-name {
+  font-size: 0.9rem;
+}
+
+.country-region {
+  font-size: 0.7rem;
+}
+
+.country-page,
+.country-name,
+.country-region {
+  line-height: 1;
+}
+
+ul.pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul.pagination li.page-item.active a.page-link {
+  color: #1a1a1a !important;
+  background-color: #e3e7eb !important;
+  border-color: #ced4da !important;
+}
+ul.pagination a.page-link {
+  padding: 0.75rem 1rem;
+  min-width: 3.5rem;
+  text-align: center;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+  color: #1a1a1a;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+ul.pagination a.page-link:hover {
+  background-color: #f4f4f4;
+}

@@ -5,7 +5,7 @@ export default function NavbarSearch() {
   return (
     <div className="bg-black fixed w-screen h-16 flex justify-center">
       <div className="h-full sm:w-screen sm:px-3 w-9/12 flex items-center justify-between">
-        <a href="#home" onClick={(e) => e.preventDefault()}>
+        <a href="/" onClick={(e) => e.preventDefault()}>
           <div className="md:w-7 md:h-7 w-10 h-10 rounded-full bg-white"></div>
         </a>
         <SearchbarSearch />
