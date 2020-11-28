@@ -28910,6 +28910,39 @@ video {
   margin: -150px 0 0 0;
 }
 
+.card:hover > .card-detail {
+  opacity: 1;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.card:hover > .card-detail:hover {
+  --tw-scale-y: 1;
+}
+
+.card:hover > .card-detail {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+figure {
+  margin: 0;
+}
+
+figure .img-card {
+  display: block; /*remove inline-block spaces*/
+  width: 100%;
+}
+
 @media (max-width: 1279px) {
   .xl\:container {
     width: 100%;

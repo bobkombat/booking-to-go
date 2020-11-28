@@ -3,8 +3,8 @@ import SearchbarSearch from "./sub-components/SeachbarSearch";
 
 export default function NavbarSearch() {
   return (
-    <div className="bg-black sticky w-screen h-16 flex justify-center">
-      <div className="h-full sm:w-screen sm:px-3 w-8/12 flex items-center justify-between">
+    <div className="bg-black fixed w-screen h-16 flex justify-center">
+      <div className="h-full sm:w-screen sm:px-3 w-9/12 flex items-center justify-between">
         <a href="#home" onClick={(e) => e.preventDefault()}>
           <div className="md:w-7 md:h-7 w-10 h-10 rounded-full bg-white"></div>
         </a>

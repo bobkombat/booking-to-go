@@ -39,3 +39,16 @@
   width: 100%;
   margin: -150px 0 0 0;
 }
+
+.card:hover > .card-detail {
+  @apply transition ease-out duration-200 opacity-100 transform hover:scale-y-100;
+}
+
+figure {
+  margin: 0;
+}
+
+figure .img-card {
+  display: block; /*remove inline-block spaces*/
+  width: 100%;
+}

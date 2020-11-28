@@ -1,12 +1,16 @@
 import React from "react";
+import MovieCardList from "../components/MovieCardList";
 import NavbarSearch from "../components/NavbarSearch";
+import FilterSearch from "../components/FilterSearch";
 
 export default function Search() {
   return (
-    <div className="mx-auto bg-white font-header antialiased h-screen overflow-hidden">
+    <div className="mx-auto bg-white font-header antialiased h-screen overflow-auto">
       <NavbarSearch />
-      <main class="mx-auto w-8/12 sm:w-screen sm:px-3 flex flex-wrap-reverse justify-center h-full bg-red-500">
-        <div></div>
+      <main className="mx-auto w-9/12 sm:mt-14 mt-20 mb-8 sm:w-screen justify-between h-2/3">
+        <FilterSearch />
+        <MovieCardList />
+        <div className="w-full h-16 bg-red-300"></div>
       </main>
     </div>
   );
