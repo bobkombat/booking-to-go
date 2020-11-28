@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { fetchMovies } from "../../store/actions/movieActions.js";
 import { useHistory, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +9,7 @@ export default function SearchbarSearch() {
   const currentPage = useSelector((store) => store.movieReducer.currentPage);
   const history = useHistory();
   const dispatch = useDispatch();
-  const { searched, page } = useParams();
+  const { searched } = useParams();
 
   async function submitSearch(e) {
     e.preventDefault();
