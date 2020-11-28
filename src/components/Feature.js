@@ -42,8 +42,6 @@ export default function Feature() {
       spaceBetween={0}
       pagination={{ clickable: true, dynamicBullets: true }}
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
       className="flex flex-row font-bold"
       effect="fade"
     >

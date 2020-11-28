@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { fetchMovies } from "../../store/actions/movieActions.js";
+import { API_URL } from "../../store/actionTypes.js";
+import { useHistory, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SearchbarSearch() {
   const [searchedValue, setSearchedValue] = useState("");
   const [loading, setLoading] = useState(false);
+  const movies = useSelector((store) => store.movieReducer.movies);
+  const fetched = useSelector((store) => store.movieReducer.fetched);
+  const currentPage = useSelector((store) => store.movieReducer.currentPage);
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const { searched, page } = useParams();
 
   async function submitSearch(e) {
     e.preventDefault();
-    setLoading(true);
+    dispatch(fetchMovies(API_URL, searchedValue));
+    history.push(`/search/${searchedValue !== "" ? searchedValue : searched}/${currentPage}`);
   }
 
   return (
@@ -26,7 +37,7 @@ export default function SearchbarSearch() {
           type="submit"
           className="flex justify-around items-center sm:w-28 h-8 rounded-full w-30 mr-3 font-bold text-lg px-4 bg-black hover:bg-gray-800 focus:ring-2 focus:ring-opacity-70 focus:ring-gray-900"
         >
-          {loading && (
+          {fetched && (
             <svg class="animate-spin sm:mr-0 mr-2 h-2 w-2 bg-white" viewBox="0 0 24 24"></svg>
           )}
           <p className="text-sm text-white">Search</p>

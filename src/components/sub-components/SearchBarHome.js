@@ -1,12 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { fetchMovies } from "../../store/actions/movieActions.js";
+import { API_URL } from "../../store/actionTypes.js";
+import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SearchBarHome() {
   const [searchedValue, setSearchedValue] = useState("");
+  const movies = useSelector((store) => store.movieReducer.movies);
+  const fetched = useSelector((store) => store.movieReducer.fetched);
+  const currentPage = useSelector((store) => store.movieReducer.currentPage);
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  useEffect(() => {
+    if (movies.length > 1 && fetched) {
+      history.push(`/search/${searchedValue}/${currentPage}`);
+      setLoading(false);
+    }
+  }, [movies]);
 
   async function submitSearch(e) {
     e.preventDefault();
     setLoading(true);
+    dispatch(fetchMovies(API_URL, searchedValue));
   }
 
   return (
